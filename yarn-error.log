@@ -1,0 +1,45 @@
+Arguments: 
+  /usr/local/bin/node /Users/shuboqiao/.yarn/bin/yarn.js add -D eslint-plugin-import
+
+PATH: 
+  /Users/shuboqiao/.bun/bin:/Users/shuboqiao/.yarn/bin:/Users/shuboqiao/.config/yarn/global/node_modules/.bin:/usr/local/bin:/System/Cryptexes/App/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/TeX/texbin:/usr/local/go/bin:/Library/Apple/usr/bin:/Library/Frameworks/Mono.framework/Versions/Current/Commands:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin:/Users/shuboqiao/Library/pnpm:/Users/shuboqiao/.bun/bin:/Users/shuboqiao/.yarn/bin:/Users/shuboqiao/.config/yarn/global/node_modules/.bin:/Users/shuboqiao/.cargo/bin:/usr/local/bin
+
+Yarn version: 
+  1.22.19
+
+Node version: 
+  16.20.0
+
+Platform: 
+  darwin arm64
+
+Trace: 
+  Error: ENOENT: no such file or directory, copyfile '/Users/shuboqiao/Library/Caches/Yarn/v6/npm-ms-2.1.2-d09d1f357b443f493382a8eb3ccd183872ae6009-integrity/node_modules/ms/package.json' -> '/Users/shuboqiao/code/eslint-config-sfilata/node_modules/@typescript-eslint/parser/node_modules/ms/package.json'
+
+npm manifest: 
+  {
+    "name": "eslint-config-sfilata",
+    "version": "0.1.0",
+    "description": "The custom eslint config1",
+    "main": "index.js",
+    "scripts": {
+      "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "keywords": [
+      "eslint-config"
+    ],
+    "author": "sfilata",
+    "license": "MIT",
+    "peerDependencies": {
+      "eslint": ">= 3"
+    },
+    "dependencies": {
+      "@typescript-eslint/parser": "^6.0.0"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile

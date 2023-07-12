@@ -1,0 +1,28 @@
+{
+  "name": "eslint-config-sfilata",
+  "version": "0.1.0",
+  "description": "The custom eslint config1",
+  "main": "index.js",
+  "files": [
+    "index.js"
+  ],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "eslint-config"
+  ],
+  "author": "sfilata",
+  "license": "MIT",
+  "peerDependencies": {
+    "eslint": ">= 3",
+    "typescript": ">=3.9"
+  },
+  "dependencies": {
+    "@typescript-eslint/eslint-plugin": "^6.0.0",
+    "@typescript-eslint/parser": "^6.0.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.1.6"
+  }
+}
