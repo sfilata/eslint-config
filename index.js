@@ -124,7 +124,12 @@ module.exports = {
     'dot-notation': 'off',
     '@typescript-eslint/dot-notation': ['error', { allowKeywords: true }],
     '@typescript-eslint/no-floating-promises': 'error',
-    '@typescript-eslint/no-misused-promises': 'error',
+    '@typescript-eslint/no-misused-promises': [
+      'error',
+      {
+        'checksVoidReturn': false
+      }
+    ],
     '@typescript-eslint/await-thenable': 'error',
     '@typescript-eslint/no-for-in-array': 'error',
     '@typescript-eslint/no-unnecessary-type-assertion': 'error',
