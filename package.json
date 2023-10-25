@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-sfilata",
-  "version": "0.1.6",
+  "version": "0.1.7",
   "type": "module",
   "description": "Sfilata's ESLint configuration",
   "homepage": "https://github.com/sfilata/eslint-config",
