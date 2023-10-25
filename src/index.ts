@@ -14,6 +14,17 @@ const VuePackages = [
   '@slidev/cli'
 ];
 
+const flatConfigProps: (keyof ConfigItem)[] = [
+  'files',
+  'ignores',
+  'languageOptions',
+  'linterOptions',
+  'processor',
+  'plugins',
+  'rules',
+  'settings'
+];
+
 export default function initConfig(options: OptionsConfig & ConfigItem = {}, ...userConfigs: (ConfigItem | ConfigItem[])[]) {
   const {
     isInEditor = !!((process.env.VSCODE_PID || process.env.JETBRAINS_IDE) && !process.env.CI),
@@ -84,6 +95,18 @@ export default function initConfig(options: OptionsConfig & ConfigItem = {}, ...
 
   if (stylisticOptions) {
     configs.push(stylistic(stylisticOptions));
+  }
+
+  // User can optionally pass a flat config item to the first argument
+  // We pick the known keys as ESLint would do schema validation
+  const fusedConfig = flatConfigProps.reduce((acc, key) => {
+    if (key in options) {
+      acc[key] = options[key] as any;
+    }
+    return acc;
+  }, {} as ConfigItem);
+  if (Object.keys(fusedConfig).length) {
+    configs.push([fusedConfig]);
   }
 
   const merged = combine(

@@ -14,5 +14,4 @@ export default config({
   rules: {
     'sort-keys/sort-keys-fix': 'error'
   }
-}
-);
+});
