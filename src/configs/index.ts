@@ -3,3 +3,8 @@ export * from './javascript';
 export * from './stylistic';
 export * from './typescript';
 export * from './vue';
+export * from './comments';
+export * from './node';
+export * from './jsdoc';
+export * from './unicorn';
+export * from './sort-keys';

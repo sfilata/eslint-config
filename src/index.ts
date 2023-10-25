@@ -1,7 +1,11 @@
-import { ignores, javascript, stylistic, typescript, vue } from './configs';
+import process from 'node:process';
+import fs from 'node:fs';
+import { isPackageExists } from 'local-pkg';
+import gitignore from 'eslint-config-flat-gitignore';
+import { comments, ignores, javascript, jsdoc, node, sortKeys, stylistic, typescript, unicorn, vue } from './configs';
+import { imports } from './configs/imports';
 import type { ConfigItem, OptionsConfig } from './types';
 import { combine } from './utils';
-import { isPackageExists } from 'local-pkg';
 
 const VuePackages = [
   'vue',
@@ -30,12 +34,30 @@ export default function initConfig(options: OptionsConfig & ConfigItem = {}, ...
     stylisticOptions.jsx = options.jsx ?? true;
   }
 
+  if (enableGitignore) {
+    if (typeof enableGitignore !== 'boolean') {
+      configs.push([gitignore(enableGitignore)]);
+    } else if (fs.existsSync('.gitignore')) {
+      configs.push([gitignore()]);
+    }
+  }
+
   configs.push(
     ignores(),
     javascript({
       isInEditor,
       overrides: overrides.javascript
-    })
+    }),
+    comments(),
+    node(),
+    jsdoc({
+      stylistic: stylisticOptions
+    }),
+    imports({
+      stylistic: stylisticOptions
+    }),
+    unicorn(),
+    sortKeys()
   );
 
   if (enableVue) {

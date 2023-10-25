@@ -1,4 +1,6 @@
 import type { ParserOptions } from '@typescript-eslint/parser';
+import type { Rules } from 'eslint-plugin-antfu';
+import type { FlatESLintConfigItem } from '@antfu/eslint-define-config';
 
 export interface OptionsComponentExts {
   /**
@@ -28,9 +30,6 @@ export interface OptionsTypeScriptWithTypes {
    */
   tsconfigPath?: string
 }
-
-type Rules = any;
-type FlatESLintConfigItem<T, B> = any;
 
 export type ConfigItem = Omit<FlatESLintConfigItem<Rules, false>, 'plugins'> & {
   /**

@@ -36,7 +36,14 @@
     "@stylistic/eslint-plugin": "^0.0.12",
     "@typescript-eslint/eslint-plugin": "^6.0.0",
     "@typescript-eslint/parser": "^6.0.0",
+    "eslint-config-flat-gitignore": "^0.1.1",
+    "eslint-plugin-antfu": "1.0.0-beta.12",
+    "eslint-plugin-eslint-comments": "^3.2.0",
     "eslint-plugin-i": "^2.28.1",
+    "eslint-plugin-jsdoc": "^46.8.2",
+    "eslint-plugin-n": "^16.2.0",
+    "eslint-plugin-sort-keys": "^2.3.5",
+    "eslint-plugin-unicorn": "^48.0.1",
     "eslint-plugin-unused-imports": "^3.0.0",
     "eslint-plugin-vue": "^9.15.1",
     "globals": "^13.23.0",
@@ -44,6 +51,8 @@
     "vue-eslint-parser": "^9.3.2"
   },
   "devDependencies": {
+    "@antfu/eslint-config": "1.0.0-beta.28",
+    "@antfu/eslint-define-config": "1.23.0-2",
     "@types/eslint": "^8.44.6",
     "@types/fs-extra": "^11.0.3",
     "@types/node": "^20.8.7",

@@ -1,5 +1,5 @@
 import type { ConfigItem, StylisticConfig } from '../types';
-import { pluginStylistic } from '../plugins';
+import { pluginAntfu, pluginStylistic } from '../plugins';
 
 export function stylistic(options: StylisticConfig = {}): ConfigItem[] {
   const {
@@ -12,9 +12,13 @@ export function stylistic(options: StylisticConfig = {}): ConfigItem[] {
     {
       name: 'sfilata:stylistic',
       plugins: {
+        antfu: pluginAntfu,
         style: pluginStylistic
       },
       rules: {
+        'antfu/consistent-list-newline': 'error',
+        'antfu/if-newline': 'error',
+        'antfu/top-level-function': 'error',
         'curly': ['error'],
 
         'style/array-bracket-spacing': ['error', 'never'],

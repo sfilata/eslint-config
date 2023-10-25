@@ -8,8 +8,7 @@ interface Person {
 const people: Person[] = [
   { name: 'Alice', age: 30 },
   { name: 'Bob', age: 25 },
-  { name: 'Charlie',
-    age: 35 }
+  { name: 'Charlie', age: 35 }
 ];
 
 // eslint-disable-next-line no-console
@@ -27,7 +26,8 @@ function identity< T >(arg: T): T {
 
 // Use the generic function with type inference
 const result = identity(
-  'TypeScript is awesome');
+  'TypeScript is awesome'
+);
 log(result);
 
 // Use optional properties in an interface
@@ -39,7 +39,9 @@ interface Car {
 // Create objects using the interface
 const car1: Car = { make: 'Toyota' };
 const car2: Car = {
-  make: 'Ford', model: 'Focus' };
+  make: 'Ford',
+  model: 'Focus'
+};
 
 // Use union types
 type Fruit = 'apple' | 'banana' | 'orange';
@@ -75,8 +77,8 @@ class Dog extends Animal {
 const dog = new Dog('Buddy');
 dog.bark();
 
-const fn = (): string => {
+function fn(): string {
   return `hello${1}`;
-};
+}
 
 log(car1, car2, favoriteFruit, numericValue, fn());
