@@ -8,8 +8,7 @@ export default config({
     'fixtures',
     '_fixtures'
   ]
-},
-{
+}, {
   files: ['src/**/*.ts'],
   rules: {
     'sort-keys/sort-keys-fix': 'error'
